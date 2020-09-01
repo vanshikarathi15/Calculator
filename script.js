@@ -18,7 +18,7 @@ for (var i = 0; i < buttons.length; i++) {
             operand1 = parseFloat(text);
             display.textContent = ""
         }
-        else if (value == "ac") {
+        else if (value == "AC") {
             display.textContent = ""
 
         }
