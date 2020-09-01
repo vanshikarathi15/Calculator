@@ -16,13 +16,36 @@ for (var i = 0; i < buttons.length; i++) {
         if (isOperator(value)) {
             operator = value
             operand1 = parseFloat(text);
-            display.textContent=""
+            display.textContent = ""
         }
         else if (value == "ac") {
-            display.textContent=""
+            display.textContent = ""
 
         }
-        else if(value =="")
+        else if (value == "sign") {
+            operand1 = parseFloat(text)
+            operand1 = -1 * operand1
+        }
+        else if (value == ".") {
+            if (text.length && !text.includes('.')) {
+                display.textContent = text + '.';
+            }
+        }
+        else if(value== "%"){
+            operand1 = parseFloat(text);
+            operand1 = operand1 / 100;
+            display.textContent = operand1;
+        }
+        else if(value == "="){
+            operand2 = parseFloat(text);
+            var result = eval(operand1 + ' ' + operator + ' ' + operand2);
+            if(result){
+                display.textContent=result;
+                operand1= result;
+                operand2= null;
+                operator= null;
+            }
+        }
         else {
             display.innerText += value;
         }
