@@ -1,0 +1,26 @@
+#calculator{
+    height:60%;
+    width:50%;
+    background-color:gray;
+    position:absolute;
+    top:20%;
+    left:20%;
+    border:2px solid black;
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction:row;
+	justify-content: space-around;
+}
+#heading{
+    height:15%;
+    width:90%;
+    background-color:black;
+    color:white;
+    text-align:center;
+    margin:2%;
+}
+#display{
+    height:15%;
+    width:90%;
+    background-color:whitesmoke;
+}
